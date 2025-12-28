@@ -1,0 +1,11 @@
+name: CI Check  # 工作流名称
+on: [push, pull_request]  # 触发条件：推送代码、提交PR时执行
+
+jobs:
+  check:
+    runs-on: ubuntu-latest  # 运行环境
+    steps:
+      - name: Checkout code  # 拉取代码
+        uses: actions/checkout@v4
+      - name: Print message  # 示例步骤：打印信息
+        run: echo "CI工作流执行成功！"
